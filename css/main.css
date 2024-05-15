@@ -1,0 +1,238 @@
+
+/* Timeline custom component */
+
+/**THE SAME CSS IS USED IN ALL 3 DEMOS**/    
+/**gallery margins**/  
+ul.gallery{    
+  margin-left: 3vw;     
+  margin-right:3vw;  
+  }    
+  
+  .zoom {      
+  -webkit-transition: all 0.001s ease-in-out;    
+  -moz-transition: all 0.001s ease-in-out;    
+  transition: all 0.001s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;  
+  }     
+  
+  .zoom:hover,  
+  .zoom:active,   
+  .zoom:focus {
+  /**adjust scale to desired size, 
+  add browser prefixes**/
+  -ms-transform: scale(1.1);    
+  -moz-transform: scale(1.1);  
+  -webkit-transform: scale(1.1);  
+  -o-transform: scale(1.1);  
+  transform: scale(1.1);    
+  position:relative;      
+  z-index:100;  
+  }
+  
+  /**To keep upscaled images visible on mobile, 
+  increase left & right margins a bit**/  
+  @media only screen and (max-width: 768px) {   
+  ul.gallery {      
+  margin-left: 15vw;       
+  margin-right: 15vw;
+  }
+  
+  /**TIP: Easy escape for touch screens,
+  give gallery's parent container a cursor: pointer.**/
+  .DivName {cursor: pointer}
+  }
+
+
+.timeline-card {
+  position: relative;
+  margin-left: 16px; }
+
+.timeline-card:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  top: 16px;
+  left: -12px;
+  border: 5px solid;
+  z-index: 2; }
+
+.timeline-body {
+  border-left: 2px solid #E6E9ED; }
+
+.timeline-card-primary:before {
+  border-color: var(--bs-primary); }
+
+.timeline-card-info:before {
+  border-color: var(--bs-info); }
+
+.timeline-card-secondary:before {
+  border-color: var(--bs-secondary); }
+
+.timeline-card-success:before {
+  border-color: var(--bs-teal); }
+
+html {
+  scroll-behavior: smooth; }
+
+html, body {
+  overflow-x: hidden; }
+
+.container {
+  max-width: 1140px; }
+
+.site-title {
+  font-size: 1.25rem;
+  line-height: 2.5rem; }
+
+.nav-link {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  color: inherit;
+  opacity: 0.8; }
+
+.header-social .nav-link {
+  font-size: 1.25rem; }
+
+.nav-link:hover,
+.nav-link:focus {
+  color: inherit;
+  opacity: 1; }
+
+.nav-item + .nav-item {
+  margin-left: 1rem; }
+
+.cover {
+  height: 500px; }
+
+.cover > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto; }
+
+.progress-bar {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px; }
+
+.text-small {
+  font-size: 0.85rem; }
+
+.text-teal {
+  color: var(--bs-teal); }
+
+footer a:not(.nav-link) {
+  color: inherit;
+  border-bottom: 1px dashed;
+  text-decoration: none;
+  cursor: pointer; }
+
+@media (min-width: 48em) {
+  .site-title {
+    float: left; }
+  .site-nav {
+    float: right; } }
+
+@media (max-width: 767px) {
+  /* disable animations on mobile */
+  [data-aos] {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important; }
+  .p-5 {
+    padding: 2.5rem 2rem !important; }
+  .portfolio-section .m-5 {
+    margin: 2rem 0 1rem !important; }
+  .portfolio-reverse {
+    flex-direction: column-reverse; }
+  .portfolio-reverse .text-end {
+    text-align: start !important; } }
+
+@media print {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important; }
+  body.bg-light {
+    background-color: #fff !important; }
+  .container {
+    width: auto;
+    max-width: 100%;
+    padding: 0; }
+  .cover {
+    height: 360px;
+    margin-bottom: 1.5rem; }
+  .cover > img {
+    display: none; }
+  .shadow-1-strong {
+    box-shadow: none !important; }
+  .resume-container > .my-5 {
+    margin: 0 !important; }
+  .my-5.p-5 {
+    padding: 1.5rem 0 !important; }
+  .about-section {
+    padding: 0 !important; }
+  .skills-section,
+  .work-experience-section,
+  .education-section,
+  .portfolio-section,
+  .reference-section,
+  .contact-section {
+    padding: 0 !important; }
+  .page-break {
+    padding-top: 5rem;
+    page-break-before: always; } }
+    
+
+/*  */
+.pt-home .banner {
+	position: absolute;
+	width: 90%;
+    top: 50%;
+	color: #fff;
+    text-align: center;
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+}
+
+.pt-home .banner h1 {
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.pt-home .banner p {
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 2rem;
+}
+
+
+
+.cd-words-wrapper {
+	text-align: center;
+}
+
+.cd-words-wrapper b {
+	min-width: 100%;
+  text-align: center;
+}
+
+
+.rotated {
+  transform: rotate(45deg); /* Equal to rotateZ(45deg) */
+  background-color: pink;
+  text-align: center;
+}
+
+.mask1{
+  transition: 0.8s;
+}
+
+.mask1:hover{
+  opacity: 0.7;
+ 
+}
